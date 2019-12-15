@@ -1,5 +1,8 @@
 # build
 __pycache__
 
-# DB情報
+# DB
 mysql/data/
+
+# ssl
+ssl/
