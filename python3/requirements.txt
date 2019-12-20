@@ -4,3 +4,4 @@ django-bootstrap4==1.0.1
 mysqlclient==1.4.4
 urllib3==1.25.3
 django-environ==0.4.5
+line-bot-sdk==1.15.0

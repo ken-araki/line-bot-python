@@ -25,6 +25,11 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '8+=1-9h1dn)2=3y#z9@qj9c-%+vruvyxs4)@+-l*e7h515#ex0'
 
+# LINE MESSAGING API ENV
+LINE_BOT_CHANNEL_SECRET = env.str('LINE_BOT_CHANNEL_SECRET')
+LINE_BOT_CHANNEL_TOKEN = env.str('LINE_BOT_CHANNEL_TOKEN')
+LINE_USER_ID = env.str('LINE_USER_ID')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

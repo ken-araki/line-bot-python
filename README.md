@@ -17,6 +17,9 @@ openssl x509 -days 36500 -req -signkey server.key < server.csr > server.crt
 ```bash
 touch python3/src/.env
 echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> python3/src/.env
+echo "LINE_BOT_CHANNEL_SECRET=${your-channel-secret}" >> python3/src/.env
+echo "LINE_BOT_CHANNEL_TOKEN=${your-channel-token}" >> python3/src/.env
+echo "LINE_USER_ID=${your-user-id}" >> python3/src/.env
 ```
 
 ## start app
