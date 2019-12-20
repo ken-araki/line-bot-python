@@ -9,11 +9,13 @@ from linebot.models import (
     MessageEvent, FollowEvent, TextMessage, TextSendMessage,
 )
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 
 line_bot_api = LineBotApi(getattr(settings, "LINE_BOT_CHANNEL_TOKEN", None))
 handler = WebhookHandler(getattr(settings, "LINE_BOT_CHANNEL_SECRET", None))
 
 # Create your views here.
+@csrf_exempt
 def callback(request):
     signature = request.META['HTTP_X_LINE_SIGNATURE']
     body = request.body.decode('utf-8')
