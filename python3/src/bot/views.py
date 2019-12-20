@@ -59,7 +59,7 @@ def translate_text(text):
     # text = 'Text you wish to translate'
     # target_language = 'fr'
     # project_id = '[Google Cloud Project ID]'
-    contents = text
+    contents = [text]
     parent = client.location_path(project_id, "global")
 
     response = client.translate_text(
