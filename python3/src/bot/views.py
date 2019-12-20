@@ -69,4 +69,7 @@ def translate_text(text):
         source_language_code='ja',
         target_language_code='en')
     # Display the translation for each input text provided
-    return response.translations[0].translated_text
+    for translation in response.translations:
+        print(u"Translated text: {}".format(translation.translated_text))
+        result = translation.translated_text
+    return result
