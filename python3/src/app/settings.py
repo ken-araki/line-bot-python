@@ -30,6 +30,12 @@ LINE_BOT_CHANNEL_SECRET = env.str('LINE_BOT_CHANNEL_SECRET')
 LINE_BOT_CHANNEL_TOKEN = env.str('LINE_BOT_CHANNEL_TOKEN')
 LINE_USER_ID = env.str('LINE_USER_ID')
 
+# Google API Service Key Path
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR, 'service-key.json')
+
+# Google Cloud Platform project id
+GCP_PROJECT_ID = env.str('GCP_PROJECT_ID')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

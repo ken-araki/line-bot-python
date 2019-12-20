@@ -12,3 +12,4 @@ ssl/
 
 # .env
 python3/src/.env
+python3/src/service-key.json
