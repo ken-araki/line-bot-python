@@ -1,8 +1,14 @@
 # build
 __pycache__
 
+# env file
+python3/.env
+
 # DB
 mysql/data/
 
 # ssl
 ssl/
+
+# .env
+python3/src/.env
