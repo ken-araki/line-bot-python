@@ -36,17 +36,17 @@ def callback(request):
 def handleTextEventMessage(event):
     now = datetime.datetime.now()
     year_month = now.strftime('%Y%m')
-    try:
-        translation = Translation_length.objects.get(year_month=year_month)
-    except Person.DoesNotExist:
-        translation = Translation_length(year_month=year_month, translation_length=0)
-    translation.translation_length += len(event.message.text)
-    translation.update_or_create()
-    if translation.translation_length > 500000:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='sorry... Translation processing cannot be performed because the monthly usage limit has been exceeded.'))
-        return
+    # try:
+    #     translation = Translation_length.objects.get(year_month=year_month)
+    # except Translation_length.DoesNotExist:
+    #     translation = Translation_length(year_month=year_month, translation_length=0)
+    # translation.translation_length += len(event.message.text)
+    # translation.update_or_create()
+    # if translation.translation_length > 500000:
+    #     line_bot_api.reply_message(
+    #         event.reply_token,
+    #         TextSendMessage(text='sorry... Translation processing cannot be performed because the monthly usage limit has been exceeded.'))
+    #     return
     
     translated_text = translate_text(event.message.text)
     line_bot_api.reply_message(
