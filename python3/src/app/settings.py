@@ -93,8 +93,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'linebot',
-        'USER': env.str('DB_TODO_MYSQL_USER'),
-        'PASSWORD': env.str('DB_TODO_MYSQL_PASSWD'),
+        'USER': env.str('DB_LINEBOT_MYSQL_USER'),
+        'PASSWORD': env.str('DB_LINEBOT_MYSQL_PASSWD'),
         'HOST': 'db',
         'PORT': '3306',
     }
