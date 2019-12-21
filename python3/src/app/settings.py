@@ -45,7 +45,6 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 # Application definition
 
 INSTALLED_APPS = [
-    'todo.apps.TodoConfig',
     'bot.apps.BotConfig',
     'django.contrib.admin',
     'django.contrib.auth',

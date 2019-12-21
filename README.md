@@ -22,9 +22,9 @@ openssl x509 -days 36500 -req -signkey server.key < server.csr > server.crt
 create docker env in the root directory as manage.py
 
 ```bash
-echo "DB_TODO_ROOT_PASSWD=${db-root-pasaword}" >> .env
-echo "DB_TODO_MYSQL_USER=${db-user-name}}}" >> .env
-echo "DB_TODO_MYSQL_PASSWD=${db-password}" >> .env
+echo "DB_ROOT_PASSWD=${db-root-pasaword}" >> .env
+echo "DB_LINEBOT_MYSQL_USER=${db-user-name}}}" >> .env
+echo "DB_LINEBOT_MYSQL_PASSWD=${db-password}" >> .env
 ```
 
 create djnago env in the same directory as manage.py
@@ -37,9 +37,9 @@ echo "LINE_BOT_CHANNEL_TOKEN=${your-channel-token}" >> python3/src/.env
 echo "LINE_USER_ID=${your-user-id}" >> python3/src/.env
 echo "GCP_PROJECT_ID=${your-gcp-project-id}" >> python3/src/.env
 
-echo "DB_TODO_ROOT_PASSWD=${same-DB_TODO_MYSQL_PASSWD}" >> python3/src/.env
-echo "DB_TODO_MYSQL_USER=${same-DB_TODO_MYSQL_USER}" >> python3/src/.env
-echo "DB_TODO_MYSQL_PASSWD=${same-DB_TODO_MYSQL_PASSWD}" >> python3/src/.env
+echo "DB_ROOT_PASSWD=${same-DB_ROOT_PASSWD}" >> python3/src/.env
+echo "DB_LINEBOT_MYSQL_USER=${same-DB_LINEBOT_MYSQL_USER}" >> python3/src/.env
+echo "DB_LINEBOT_MYSQL_PASSWD=${same-DB_LINEBOT_MYSQL_PASSWD}" >> python3/src/.env
 ```
 
 ## create service-key and copy

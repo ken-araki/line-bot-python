@@ -8,10 +8,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_TODO_ROOT_PASSWD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWD}
       MYSQL_DATABASE: linebot
-      MYSQL_USER: ${DB_TODO_MYSQL_USER}
-      MYSQL_PASSWORD: ${DB_TODO_MYSQL_PASSWD}
+      MYSQL_USER: ${DB_LINEBOT_MYSQL_USER}
+      MYSQL_PASSWORD: ${DB_LINEBOT_MYSQL_PASSWD}
       TZ: 'Asia/Tokyo'
 
   python:
