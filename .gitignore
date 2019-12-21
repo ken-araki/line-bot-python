@@ -11,5 +11,6 @@ mysql/data/
 ssl/
 
 # .env
+.env
 python3/src/.env
 python3/src/service-key.json
