@@ -11,9 +11,8 @@ class Translation_length (models.Model):
       max_length=6,
       unique=True
     )
-    translation_length = models.CharField(
-      verbose_name='翻訳文字数',
-      max_length=10
+    translation_length = models.IntegerField(
+      verbose_name='翻訳文字数'
     )
     insert_date = models.DateTimeField(
       'date published',

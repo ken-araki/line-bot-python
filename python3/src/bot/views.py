@@ -42,7 +42,7 @@ def handleTextEventMessage(event):
         translation = Translation_length(year_month=year_month, translation_length=0)
     translation.translation_length += len(event.message.text)
     translation.update_or_create()
-    if translation.translation_length > 500000
+    if translation.translation_length > 500000:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='sorry... Translation processing cannot be performed because the monthly usage limit has been exceeded.'))
